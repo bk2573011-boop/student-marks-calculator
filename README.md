@@ -1,30 +1,24 @@
-# 📊 Student Marks Calculator
-Created by Bibha Kumari
+# Student Marks Calculator
+# Created by Bibha Kumari
 
-A simple Python project to calculate a student's marks, percentage, and pass/fail status for Maths, Python, and SQL subjects.
+print("===== Student Marks Calculator =====")
 
-## ✨ Features
-- Student ka naam input leta hai
-- Maths, Python, SQL ke marks leta hai
-- Total marks calculate karta hai (out of 300)
-- Percentage nikaalta hai
-- Pass/Fail status batata hai
+name = input("Enter student name: ")
+math = int(input("Enter Maths marks: "))
+python = int(input("Enter Python marks: "))
+sql = int(input("Enter SQL marks: "))
 
-## 🚀 How to Run
+total_marks = math + python + sql
+percentage = total_marks / 3
 
-1. Repository clone karo:
-```bash
-git clone https://github.com/bk2573011-boop/student-marks-calculator.git
-```
+print("\n----- Result -----")
+print("Student Name:", name)
+print("Total Marks:", total_marks, "/ 300")
+print("Percentage:", round(percentage, 2), "%")
 
-2. Folder mein jao:
-```bash
-cd student-marks-calculator
-```
+if percentage >= 40:
+    print("Status: PASS ✅")
+else:
+    print("Status: FAIL ❌")
 
-3. Program run karo:
-```bash
-python main.py
-```
-
-## 📝 Example
+print("Thank you for using the calculator!")
